@@ -1,12 +1,18 @@
-#Bibliotecas
+# Mariana Negrete Román
+# Noviembre 2024
+# Script para mapa de sintenia de genes en R.
+
+#Bibliotecas necesarias
 library(genbankr)
 library(dplyr)
 library(gggenes)
 library(ggplot2)
 
+# Subir tu archivo .gbk
 gb_data <- readGenBank("ruta/a/tu/archivo/.gbk")
 summary(gb_data)  # Resumen del contenido del archivo
 
+# Datos de CDS y genes
 cds_data <- gb_data@cds  # Regiones codificantes
 genes_data <- gb_data@genes  # Genes
 
